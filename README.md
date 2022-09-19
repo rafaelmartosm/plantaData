@@ -14,5 +14,6 @@ Configurando o projeto:
 - Altere as propriedades informado o usuário e senha do seu banco de dados:
 
 spring.datasource.username=usuario
+
 spring.datasource.password=senha
 
