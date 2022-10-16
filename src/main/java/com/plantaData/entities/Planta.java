@@ -1,22 +1,24 @@
 package com.plantaData.entities;
 
+import java.io.Serializable;
 import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import jakarta.validation.constraints.NotNull;
-
 @Entity
 @Table(name = "plantaData")
-public class Planta{
+public class Planta implements Serializable{
 	
-	
+	private static final long serialVersionUID = 1L;
+
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Id
 	private Long id;

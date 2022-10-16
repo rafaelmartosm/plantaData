@@ -1,18 +1,20 @@
 package com.plantaData.entities.dto;
 
+import java.io.Serializable;
 import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.validation.constraints.NotNull;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.plantaData.entities.Planta;
 
-import jakarta.persistence.Column;
-import jakarta.validation.constraints.NotNull;
+public class PlantaDTO implements Serializable {
+	
+	private static final long serialVersionUID = 1L;
 
-public class PlantaDTO {
-	
-	
 	@Column(name = "especie_planta")
 	@NotNull(message = "A espécie é obrigatório")
 	private String especie;
